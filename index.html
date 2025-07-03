@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dancing Cat with Background Timer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      transition: background-color 1s ease;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Dancing Cat">
+
+  <script>
+    // Wait 10.5 seconds, then change background color to blue
+    setTimeout(() => {
+      document.body.style.backgroundColor = 'blue';
+    }, 10500); // 10.5 seconds in milliseconds
+  </script>
+</body>
+</html>
